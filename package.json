@@ -30,7 +30,6 @@
     "directories": {
       "output": "dist"
     },
-    "publish": "never"
   },
   "dependencies": {
     "electron-updater": "^6.1.8",
