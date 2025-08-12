@@ -11,30 +11,25 @@
     "dist": "electron-builder"
   },
   "build": {
-    "appId": "com.yourcompany.introjoiner",
-    "productName": "IntroJoiner",
-    "files": [
-      "src/**/*",
-      "assets/**/*",
-      "node_modules/**/*",
-      "package.json"
+  "appId": "com.a313469314max.piliangpinjie",
+  "productName": "PiLiangPinJie",
+  "files": [
+    "src/**/*",
+    "assets/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "asar": true,
+  "win": {
+    "target": [
+      { "target": "nsis", "arch": ["x64"] }
     ],
-    "asar": true,
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "icon": "assets/icon.png",
-      "artifactName": "IntroJoiner-${version}-Setup.${ext}"
-    },
-    "directories": {
-      "output": "dist"
-    }
+    "icon": "assets/icon.png",
+    "artifactName": "PiLiangPinJie-${version}-Setup.${ext}"
+  },
+  "directories": { "output": "dist" }
+}
+
   },
   "dependencies": {
     "electron-updater": "^6.1.8",
