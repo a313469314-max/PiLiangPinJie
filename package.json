@@ -29,7 +29,7 @@
     },
     "directories": {
       "output": "dist"
-    },
+    }
   },
   "dependencies": {
     "electron-updater": "^6.1.8",
