@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IntroJoiner 桌面版</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>IntroJoiner <span class="badge">离线 · Windows</span></h1>
+    <p class="muted">批量拼接：片头 + 正片（内置 ffmpeg）</p>
+
+    <div class="row">
+      <button id="btnIntro">选择片头（mp4）</button>
+      <span id="introPath" class="muted"></span>
+    </div>
+    <div class="row">
+      <button id="btnMains">选择正片（可多选）</button>
+      <span id="mainsCount" class="muted"></span>
+    </div>
+    <div class="files" id="mainList"></div>
+
+    <h2>输出设置</h2>
+    <div class="row">
+      <label>预设尺寸
+        <select id="preset">
+          <option value="passthrough">保持原参数（更快）</option>
+          <option value="1080x1920@30">竖版 1080×1920 · 30fps</option>
+          <option value="1920x1080@30">横版 1920×1080 · 30fps</option>
+          <option value="1080x1080@30">方形 1080×1080 · 30fps</option>
+        </select>
+      </label>
+      <label>视频码率(k) <input id="vbit" type="number" value="3500" min="300" max="20000" step="100"></label>
+      <label>音频码率(k) <input id="abit" type="number" value="160" min="32" max="512" step="16"></label>
+      <label>并发 <input id="concurrency" type="number" value="2" min="1" max="8"></label>
+    </div>
+
+    <div class="row">
+      <button id="btnOut">选择输出目录</button>
+      <span id="outPath" class="muted"></span>
+    </div>
+
+    <div class="row">
+      <button id="btnStart" class="primary">开始批量拼接</button>
+      <span id="status" class="muted">就绪</span>
+    </div>
+
+    <progress id="progress" value="0" max="100"></progress>
+    <div class="muted" id="progressText">0%</div>
+    <pre class="log" id="log"></pre>
+  </div>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>
