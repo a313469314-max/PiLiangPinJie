@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build EXE
+      - name: Build EXE (no publish)
         run: npx electron-builder --publish=never
 
       - name: Upload installer artifact
