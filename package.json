@@ -1,5 +1,5 @@
 {
-  "name": "intro-joiner",
+  "name": "piliang-pinjie",
   "version": "1.0.1",
   "description": "批量把片头与多个正片拼接为成品视频（离线桌面版）",
   "author": "You",
@@ -11,31 +11,31 @@
     "dist": "electron-builder"
   },
   "build": {
-  "appId": "com.a313469314max.piliangpinjie",
-  "productName": "PiLiangPinJie",
-  "files": [
-    "src/**/*",
-    "assets/**/*",
-    "node_modules/**/*",
-    "package.json"
-  ],
-  "asar": true,
-  "win": {
-    "target": [
-      { "target": "nsis", "arch": ["x64"] }
+    "appId": "com.a313469314max.piliangpinjie",
+    "productName": "PiLiangPinJie",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "package.json"
     ],
-    "icon": "assets/icon.png",
-    "artifactName": "PiLiangPinJie-${version}-Setup.${ext}"
-  },
-  "directories": { "output": "dist" }
-}
-
+    "asar": true,
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] }
+      ],
+      "icon": "assets/icon.png",
+      "artifactName": "PiLiangPinJie-${version}-Setup.${ext}"
+    },
+    "directories": {
+      "output": "dist"
+    }
   },
   "dependencies": {
     "electron-updater": "^6.1.8",
+    "execa": "^8.0.1",
     "ffmpeg-static": "^5.2.0",
-    "ffprobe-static": "^3.1.0",
-    "execa": "^8.0.1"
+    "ffprobe-static": "^3.1.0"
   },
   "devDependencies": {
     "electron": "^31.2.0",
